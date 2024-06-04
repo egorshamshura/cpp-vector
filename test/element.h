@@ -1,6 +1,7 @@
 #pragma once
 
 #include <set>
+#include <cstddef>
 
 struct element {
   struct no_new_instances_guard;

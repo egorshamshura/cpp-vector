@@ -23,8 +23,8 @@ public:
   vector() noexcept = default;
 
   // O(N) strong
-  vector(const vector& other) : vector(other, other.size()) {
-  }
+  vector(const vector& other)
+      : vector(other, other.size()) {}
 
   // O(1) strong
   vector(vector&& other)
@@ -148,11 +148,7 @@ public:
 
   // O(N) nothrow
   void clear() noexcept {
-    size_t sz = size();
-    for (size_t j = 0; j < sz; j++) {
-      pop_back();
-    }
-    size_ = 0;
+    erase(begin(), end());
   }
 
   // O(1) nothrow
